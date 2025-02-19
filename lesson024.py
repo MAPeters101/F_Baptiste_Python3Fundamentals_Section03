@@ -31,5 +31,27 @@ a = float(9)
 print(a)
 print('-'*30)
 
+current_balance = 100.0
+currentBalance =100.0
+print(current_balance)
+print(currentBalance)
+print('-'*30)
+
+x = 100
+y = 0.1
+z = 10
+
+r = x * ((1 + y/12) ** (z * 12))
+print(r)
+
+principal = 100
+apr = 0.1
+years = 10
+
+future_value = principal * ((1 + apr/12) ** (years * 12))
+print(future_value)
+
+
+
 
 

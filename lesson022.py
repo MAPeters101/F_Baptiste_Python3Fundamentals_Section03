@@ -36,6 +36,16 @@ my_account.deposit(100)
 my_account.withdraw(600)
 my_account.withdraw(10_000)
 
+print('-'*30)
+
+print(10+15)
+print((10).__add__(25))
+print(0.125)
+print((0.125).as_integer_ratio())
+print((0.1).as_integer_ratio())
+
+
+
 
 
 

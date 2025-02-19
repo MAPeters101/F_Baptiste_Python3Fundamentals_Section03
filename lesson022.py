@@ -27,3 +27,15 @@ class Account:
                 print(f'Current balance is {self.balance}')
 
 
+my_account = Account('123-456', 'savings', 1_000.00)
+print(my_account.account_number)
+print(my_account.account_type)
+print(my_account.balance)
+
+my_account.deposit(100)
+my_account.withdraw(600)
+my_account.withdraw(10_000)
+
+
+
+

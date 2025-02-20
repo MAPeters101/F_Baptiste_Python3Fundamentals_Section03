@@ -37,3 +37,27 @@ print()
 print('-'*80)
 
 
+
+a = 20
+b = 10
+print(a / b > 1)
+print()
+
+a = 20
+b = 0
+#print(a / b > 1)
+print(b != 0 and a / b > 1)
+print()
+
+a = 20
+b = 30
+#print(a / b > 1)
+print(b != 0 and a / b > 1)
+print()
+
+a = 20
+b = 10
+#print(a / b > 1)
+print(b != 0 and a / b > 1)
+print()
+

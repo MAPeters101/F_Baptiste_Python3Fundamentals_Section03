@@ -29,4 +29,7 @@ print(a is b)
 print(id(a), id(b))
 print()
 
-
+print(10 != 12)
+print(10.5 != 12.5)
+print(10 >= 5)
+print(10.5 < 100)

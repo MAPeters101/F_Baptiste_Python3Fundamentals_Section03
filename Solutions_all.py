@@ -1,14 +1,17 @@
 """
 Exercise 1
-Given two floats a and b, and some tolerance tol, write an expression that will test whether a and b are within tol of each other.
+Given two floats a and b, and some tolerance tol, write an expression that
+will test whether a and b are within tol of each other.
 
-We essentially want to make sure that the distance between a and b is bounded by some tolerance tol.
+We essentially want to make sure that the distance between a and b is bounded
+by some tolerance tol.
 
-We can use the abs() function to calculate the absolute value of some value, so:
+We can use the abs() function to calculate the absolute value of some value,
+so:
 
 abs(a-b)
 
-essentially calculates the distance betwwen a and b.
+essentially calculates the distance between a and b.
 
 Our solution is then:
 
@@ -24,14 +27,19 @@ However, using a tolerance we can see if they are "close enough":
 tol = 0.0001
 abs(a - b) < tol
 True
+
+
+
 Exercise 2
 Assume you have some variable elapsed that contains elapsed time in seconds.
 
-Create three new variables: hours, minutes and seconds, that represent the number of hours, minutes and seconds represented by elapsed.
+Create three new variables: hours, minutes and seconds, that represent the
+number of hours, minutes and seconds represented by elapsed.
 
 For example, if elapsed = 7835, then hours = 2, minutes = 10 and seconds = 35
 
-We are going to take this step by step first, and later simplify things if we can.
+We are going to take this step by step first, and later simplify things if we
+can.
 
 Let's start with some value for elapsed:
 
@@ -40,7 +48,8 @@ The number of seconds in an hour is 60 * 60.
 
 The number of seconds in a minute is 60.
 
-Given that elapsed is in seconds, we can calculate the number of (whole) hours in elapsed using integer division:
+Given that elapsed is in seconds, we can calculate the number of (whole) hours
+in elapsed using integer division:
 
 hours = elapsed // (60 * 60)
 print('hours =', hours)
@@ -55,7 +64,8 @@ But it's actually simpler to use %:
 remaining_seconds = elapsed % (60 * 60)
 print('remaining_seconds = ', remaining_seconds)
 remaining_seconds =  635
-Next we need to calculate the number of (whole) minutes in those remaining seconds:
+Next we need to calculate the number of (whole) minutes in those remaining
+seconds:
 
 minutes = remaining_seconds // 60
 print('minutes = ', minutes)
@@ -77,7 +87,9 @@ print(hours, minutes, seconds)
 2 10 35
 If we wanted to we could get rid of the temporary variable remaining_seconds.
 
-(I call it temporary because once we're done with our calculation we don't need it anymore - our result is stored in the variables hours, minutes and seconds)
+(I call it temporary because once we're done with our calculation we don't
+need it anymore - our result is stored in the variables hours, minutes and
+seconds)
 
 elapsed = 7835
 hours = elapsed // (60 * 60)
@@ -86,7 +98,9 @@ seconds = elapsed % (60 * 60) % 60
 
 print(hours, minutes, seconds)
 2 10 35
-Now operator precedence worked for us here, but I don't consider the above very "safe" or easy to understand how the operations are grouped, so I would prefer this:
+Now operator precedence worked for us here, but I don't consider the above
+very "safe" or easy to understand how the operations are grouped, so I would
+prefer this:
 
 elapsed = 7835
 hours = elapsed // (60 * 60)
@@ -104,6 +118,8 @@ seconds = (elapsed % 3600) % 60
 
 print(hours, minutes, seconds, sep=':')
 2:10:35
-Notice how I specified sep in the print function - by default the separator used is a space, but here we can override that, so I chose : as the separator character.
+Notice how I specified sep in the print function - by default the separator
+used is a space, but here we can override that, so I chose : as the separator
+character.
 
 """

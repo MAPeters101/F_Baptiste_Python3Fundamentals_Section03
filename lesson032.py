@@ -46,5 +46,29 @@ print()
 print(0.1*3 == 0.3)
 
 
+class Vector:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
+    def __add__(self, other):
+        if isinstance(other, Vector):
+            return Vector(self.x + other.x, self.y + other.y)
+
+    def __repr__(self):
+        return f'Vector({self.x}, {self.y})'
+
+    def __eq__(self, other):
+        if isinstance(other, Vector):
+            return self.x == other.x and self.y == other.y
+        return False
+
+
+v1 = Vector(1,1)
+v2 = Vector(1,1)
+v3 = Vector(2,3)
+print(id(v1), id(v2), id(v3))
+print(v1 is v2)
+print(v1 == v2)
+print(v1 == v3)
 

@@ -72,3 +72,8 @@ print(v1 is v2)
 print(v1 == v2)
 print(v1 == v3)
 
+
+
+
+
+
